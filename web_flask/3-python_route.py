@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""task 1"""
+"""task 3"""
 
 from flask import Flask
 
@@ -21,6 +21,7 @@ def indexC(text):
     return ("C {}".format(text)).replace('_', ' ')
 
 
+@app.route("/python/", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
 def indexPy(text="is cool"):
     return ("Python {}".format(text)).replace('_', ' ')
